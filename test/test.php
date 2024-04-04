@@ -43,6 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email
     if ($mail->send()) {
         echo "<p>Thank you for your submission!</p>";
+        //https://www.upwork.com/freelancers/~015bc0ef48ed4a04cf
+        // Please initiate chat if you have issue in redirection we can discuss further.
+        header("Location: {$_SERVER['PHP_SELF']}");
     } else {
         echo "<p>Sorry, there was an error submitting your form. Please try again later.</p>";
         echo "<p>Error: " . $mail->ErrorInfo . "</p>";
